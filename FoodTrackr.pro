@@ -6,7 +6,7 @@ HEADERS += \
     include/filewriter.h
 
 SOURCES += \
-    src/main.cpp
+    src/main.cpp \
     src/filewriter.cpp
 
 RESOURCES += qml.qrc

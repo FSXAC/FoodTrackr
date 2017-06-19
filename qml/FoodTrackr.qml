@@ -13,9 +13,8 @@ ApplicationWindow {
     menuBar: MenuBar {
         Menu {
             title: "&File"
-            MenuItem { text: "New"}
-            MenuItem { text: "Open" }
-            MenuItem { text: "Close" }
+            MenuItem { text: "Import"}
+            MenuItem { text: "Export" }
         }
 
         Menu {
@@ -39,11 +38,11 @@ ApplicationWindow {
         z: 1
         RowLayout {
             anchors.fill: parent
-            ToolButton { text: "hello"; checkable: true; }
-            ToolBarSeparator { }
-            ToolButton { text: "world"; }
-            Item { Layout.fillWidth: true }
-            Button { text: "test" }
+            ToolButton { text: "New entry"; iconSource: "qrc:/images/grass.png" }
+//            ToolBarSeparator { }
+//            ToolButton { text: "world"; }
+//            Item { Layout.fillWidth: true }
+//            Button { text: "test" }
         }
     }
 

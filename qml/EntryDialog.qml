@@ -70,14 +70,28 @@ Dialog {
             Label { text: "Item:" }
             RowLayout {
                 Layout.columnSpan: 2;
-                Button {
-                    id: itemIcon
-                    text: "Icon"
+                // Button {
+                //     id: itemIcon
+                //     text: "Icon"
 
-                    onClicked: {
-                        itemIconChooser.show(itemIcon.x, itemIcon.y)
-                    }
+                //     onClicked: {
+                //         itemIconChooser.show(itemIcon.x, itemIcon.y)
+                //     }
+                // }
+                ComboBox {
+                    id: itemIcon
+                    model: itemIconModel
                 }
+
+                ListModel {
+                    id: itemIconModel
+                    ListElement { text: "test 1" }
+                    ListElement { text: "test 2" }
+                    ListElement { text: "test 3" }
+                    ListElement { text: "test 4" }
+                    ListElement { text: "test 5" }
+                }
+
                 TextField {
                     id: itemName;
                     Layout.fillWidth: true

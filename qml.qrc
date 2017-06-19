@@ -1,15 +1,16 @@
 <RCC>
     <qresource prefix="/">
         <file>qtquickcontrols2.conf</file>
+        <file>qml/qmldir</file>
 
         <file>qml/FoodTrackr.qml</file>
-
-        <file>qml/qmldir</file>
 
         <file>qml/EntryDialog.qml</file>
         <file>qml/First.qml</file>
         <file>qml/Resources.qml</file>
         <file>qml/Second.qml</file>
         <file>qml/ToolBarSeparator.qml</file>
+
+        <file>images/grass.png</file>
     </qresource>
 </RCC>
