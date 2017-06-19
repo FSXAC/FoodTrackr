@@ -5,7 +5,7 @@ int main(int argc, char *argv[]) {
     QGuiApplication app(argc, argv);
 
     QQmlApplicationEngine engine;
-    engine.load(QUrl(QLatin1String("qrc:/FoodTrackr.qml")));
+    engine.load(QUrl(QLatin1String("qrc:/qml/FoodTrackr.qml")));
 
     return app.exec();
 }

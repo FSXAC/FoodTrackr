@@ -2,7 +2,12 @@ QT += qml quick
 
 CONFIG += c++11
 
-SOURCES += main.cpp
+HEADERS += \
+    include/filewriter.h
+
+SOURCES += \
+    src/main.cpp
+    src/filewriter.cpp
 
 RESOURCES += qml.qrc
 

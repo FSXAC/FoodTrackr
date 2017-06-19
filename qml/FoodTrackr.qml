@@ -1,11 +1,8 @@
+import "."
 import QtQuick 2.7
 import QtQuick.Controls 1.4
 import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.0
-
-import QtQml.Models 2.2
-
-import "./qml"
 
 ApplicationWindow {
     visible: true
