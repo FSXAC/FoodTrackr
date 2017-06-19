@@ -5,9 +5,11 @@
         <file>FoodTrackr.qml</file>
 
         <file>qml/qmldir</file>
-        <file>qml/Resources.qml</file>
-        <file>qml/ToolBarSeparator.qml</file>
+
+        <file>qml/EntryDialog.qml</file>
         <file>qml/First.qml</file>
+        <file>qml/Resources.qml</file>
         <file>qml/Second.qml</file>
+        <file>qml/ToolBarSeparator.qml</file>
     </qresource>
 </RCC>
