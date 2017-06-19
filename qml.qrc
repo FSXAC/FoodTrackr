@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qtquickcontrols2.conf</file>
+
+        <file>FoodTrackr.qml</file>
+
+        <file>qml/qmldir</file>
+        <file>qml/Resources.qml</file>
+        <file>qml/ToolBarSeparator.qml</file>
+        <file>qml/First.qml</file>
+        <file>qml/Second.qml</file>
+    </qresource>
+</RCC>
