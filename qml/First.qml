@@ -12,47 +12,53 @@ Rectangle {
     width: root.width
     height: root.height
 
-    ListView {
-        id: listView
-        anchors.fill: parent
+    // list view for all the groceries
+     ListView {
+         id: listView
+         anchors.fill: parent
         
-        model: groceryModel
-        delegate: groceryDelegate
+         model: groceryModel
+         delegate: groceryDelegate
 
-        Controls.ScrollIndicator.vertical: Controls.ScrollIndicator { }
-    }
+         Controls.ScrollIndicator.vertical: Controls.ScrollIndicator { }
+     }
 
-    Component {
-        id: groceryDelegate
+     // grocery delegate
+     Component {
+         id: groceryDelegate
 
-        Item {
-            Rectangle {
-                width: root.width
-                height: 50
-                color: groceryDelegateMouseArea.containsMouse ? "#39F" : "white"
-                Row {
-                    spacing: 20
-                    Text { text: qsTr(name) }
-                    Text { text: qsTr(String(quantity)) }
-                    Text { text: qsTr((unitMass === -1 ? "N/A" : String(unitMass)) + unitMassUnit) }
-                    Text { text: qsTr("$ " + String(cost)) }
-                    Text { text: qsTr(String(expiracyDate)) }
-                }
+         Item {
+             id: delegateItem
+             width: listView.width; height: 40
+             clip: true
 
-                MouseArea {
-                    id: groceryDelegateMouseArea
-                    anchors.fill: parent
-                    hoverEnabled: true
-                    cursorShape: Qt.PointingHandCursor
-                    onClicked: {
-                        console.log(name)
-                        entryDialog.open()
-                    }
-                }
-            }
-        }
-    }
+             Rectangle {
+                 anchors.fill: parent
+                 color: groceryDelegateMouseArea.containsMouse ? "#39F" : "white"
+                 Row {
+                     spacing: 20
+                     Text { text: qsTr(name) }
+                     Text { text: qsTr(String(quantity)) }
+                     Text { text: qsTr((unitMass === -1 ? "N/A" : String(unitMass)) + unitMassUnit) }
+                     Text { text: qsTr("$ " + String(cost)) }
+                     Text { text: qsTr(String(expiracyDate)) }
+                 }
 
+                 MouseArea {
+                     id: groceryDelegateMouseArea
+                     anchors.fill: parent
+                     hoverEnabled: true
+                     cursorShape: Qt.PointingHandCursor
+                     onClicked: {
+                         console.log(name)
+                         entryDialog.open()
+                     }
+                 }
+             }
+         }
+     }
+
+    // model (template) for each grocery item
     ListModel {
         id: groceryModel
         ListElement {
@@ -61,6 +67,22 @@ Rectangle {
             unitMass: -1
             unitMassUnit: "kg"
             cost: 5.49
+            expiracyDate: "placeholder"
+        }
+        ListElement {
+            name: "Orange"
+            quantity: 1
+            unitMass: -1
+            unitMassUnit: "kg"
+            cost: 2.00
+            expiracyDate: "placeholder"
+        }
+        ListElement {
+            name: "Maple Syrup"
+            quantity: 1
+            unitMass: 6
+            unitMassUnit: "kg"
+            cost: 10.45
             expiracyDate: "placeholder"
         }
     }
